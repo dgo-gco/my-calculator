@@ -8,43 +8,43 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <div class="container">
         <div class="screen">
-            <div id="operations"></div>
+                <div class="prev-operand"></div>
+                <div class="current-operand"></div>
         </div>
-        <div class="keys">
-            <div class="first-row">
-                <button id="ac-btn">AC</button>
-                <button id="division-btn">÷</button>
-                <button id="mult-btn">x</button>
-                <button id="plus-btn">+</button>
-            </div>
-
-            <div class="second-row">
-                <button id="seven-btn">7</button>
-                <button id="eight-btn">8</button>
-                <button id="nine-btn">9</button>
-                <button id="minus-btn">-</button>
-            </div>
+        
+                <button id="ac-btn" class="double-space">AC</button>
+                <button id="del-btn">DEL</button>
+                <button id="division-btn" data-operator>÷</button>
             
-            <div class="third-row">
-                <button id="four-btn">4</button>
-                <button id="five-btn">5</button>
-                <button id="six-btn">6</button>
-                <button id="equals-btn">=</button>
-            </div>
+                <button class="number" id="seven-btn">7</button>
+                <button class="number" id="eight-btn">8</button>
+                <button class="number" id="nine-btn">9</button>
+                <button id="mult-btn" data-operator>x</button>
+                
+                <button class="number" id="four-btn">4</button>
+                <button class="number" id="five-btn">5</button>
+                <button class="number" id="six-btn">6</button>
+                <button id="plus-btn" data-operator>+</button>
+                
+                <button class="number" id="one-btn">1</button>
+                <button class="number" id="two-btn">2</button>
+                <button class="number" id="three-btn">3</button>
+                <button id="minus-btn" data-operator>-</button>
 
-            <div class="fourth-row">
-                <button id="one-btn">1</button>
-                <button id="two-btn">2</button>
-                <button id="three-btn">3</button>
-                <button id="zero-btn">0</button>
-            </div>
-        </div>
+                <button class="number">.</button>
+                <button class="number" id="zero-btn">0</button>
+                <button id="equals-btn" class="double-space">=</button>
+                
+
+         
     </div>
     
     <script src="script.js"></script>

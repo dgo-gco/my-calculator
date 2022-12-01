@@ -1,71 +1,88 @@
-* {
-    padding: 0px;
-    margin: 0px;
+*, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
 }
 
  /* @keyframes col {
     0% {background-color:red} 50% {background-color:green} 100% {background-color:blue}
 } */
+
 body { 
     animation: col 5s infinite;
-    height: 100vh;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container {
-    border: 2px solid black;
-    height: 400px;
-    width: 300px;
-    margin-top: 30px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 8px grey;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(26, 26, 31);
+}
+
+.container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(57, 56, 56);
+    color: white;
+    min-height: 100%;
+}
+
+.container > button:nth-of-type(1),
+.container > button:nth-of-type(2) {
+    background-color: rgb(143, 30, 10);
+}
+
+.container > button:nth-last-of-type(1) {
+    background-color: rgb(114, 113, 112);
+}
+
+.container > button:hover {
+    background-color: rgb(34, 34, 34);;
+}
+
+.container > button:nth-of-type(1):hover,
+.container > button:nth-of-type(2):hover {
+    background-color: rgb(98, 19, 5);
+}
+
+.container > button:nth-last-of-type(1):hover {
+    background-color: rgb(92, 91, 91);
+}
+
+.double-space {
+    grid-column: span 2;
 }
 
 .screen {
+    grid-column: 1 / -1;
     border: 1px solid black;
-    height: 90px;
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin: 10px;
+    background-color: rgb(171, 198, 165);
+    min-height: 100px;
     border-radius: 5px;
-    background-color: rgb(151, 171, 171);
-    font-family: 'Silkscreen', cursive;
-    font-size: 42px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.first-row, .second-row,
-.third-row, .fourth-row {
-    margin: 9px;
-    margin-left: 13px;
+.prev-operand, .current-operand {
+    font-size: 32px;
+    font-family: 'Orbitron', sans-serif;
 }
 
-button {
-    border-radius: 100px;
-    padding: 17px 25px;
-    border: none;
-    font-size: 25px;
-}
-
-#ac-btn {
-    padding: 17px 15px;
-}
-
-#division-btn,
-#mult-btn,
-#plus-btn {
-    padding: 17px 25px;
-}
-
-#minus-btn {
-    padding: 17px 27px;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: gray;
-}
