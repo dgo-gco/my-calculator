@@ -86,3 +86,21 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
+@media screen and (max-width: 376px) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        grid-template-columns: repeat(4, 85px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: rgb(26, 26, 31);
+    }
+}
